@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">medicus-task</string>
+    <string name="report_list">Report List</string>
+    <string name="error_loading_item">Error loading item</string>
+    <string name="click_to_retry">Click to retry</string>
+    <string name="error_message">Oops, something went wrong,\n please try again later.</string>
+    <string name="try_again">Try again</string>
+    <string name="blood">blood</string>
+    <string name="biomarker_details">Biomarker Details</string>
+    <string name="your_result_is">Your result is</string>
+    <string name="info">Info</string>
+    <string name="insights">Insights</string>
+
+</resources>

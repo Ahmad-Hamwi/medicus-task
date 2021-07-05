@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="biomarker"
+            type="com.ahmadhamwi.medicus_task.presentation.model.BiomarkerUI" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_autorenew_24"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@{@string/error_loading_item + `. ` + @string/click_to_retry + `.`}"
+                android:textSize="20sp"
+                app:existence="@{!biomarker.isReloading()}"
+                tools:text="Error loading Item. Click to retry." />
+
+            <ProgressBar
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/design_default_color_primary"
+                app:existence="@{biomarker.isReloading()}"
+                tools:visibility="gone" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

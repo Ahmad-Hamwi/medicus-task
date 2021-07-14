@@ -1,6 +1,6 @@
 # Medicus Task
 
-A quick, simple, and android task demonstrating couple of technologies in-demand.
+A quick, simple, android task demonstrating couple of technologies in-demand.
 
 ## Key Features:
 
